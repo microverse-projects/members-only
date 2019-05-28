@@ -15,23 +15,8 @@ This is one of the Ruby on Rails projects recommended by [Microverse](https://ww
 
 ## Instructions
 
-<!-- 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ... -->
+1. Git clone this repository.
+2. `git checkout development`
+3. `bundle install`
+4. `rails db:migrate`
+5. `rails server`

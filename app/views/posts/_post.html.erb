@@ -1,0 +1,11 @@
+<div class="posts">
+  <div>
+    <h3><%= post.title %></h3>
+    <% if logged_in? %>
+    	<div>
+    		<%= User.find_by(id: post.user_id).name  %>
+    	</div>
+    <% end %>
+    <p><%= post.content %></p>
+  </div>
+</div>
