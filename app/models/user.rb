@@ -14,12 +14,17 @@ class User < ApplicationRecord
   def self.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
+ 
 
-private 
-
+  # Set remember_token
   def remember
     self.remember_token = User.new_token
     self.remember_token = User.encrypt(remember_token)
+  end
+
+  # Remove remember_token
+  def forget
+    update_attribute(:remember_token, nil)
   end
 
 end
