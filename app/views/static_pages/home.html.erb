@@ -1,0 +1,17 @@
+<% provide(:title, 'Home') %>
+<h1>Welcome</h1>
+
+
+
+<div class="jumbotron">
+  <h2>Hello, member</h2>
+  <p>Welcome to members-only exclusive blog</p>   
+  <% unless logged_in? %>
+    <%= link_to "Sign up", signup_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Login", login_path, class: "btn btn-primary btn-lg" %>
+  <% end %>
+  <% if logged_in? %>
+    <%= link_to "Create new Post", posts_new_path, class: "btn btn-primary btn-lg" %> 
+    <%= link_to "View all Posts and it's Author", posts_path, class: "btn btn-primary btn-lg" %>
+<% end %>
+</div>

@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Exclusive clubhouse where your members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
-Things you may want to cover:
+This is one of the Ruby on Rails projects recommended by [Microverse](https://www.microverse.org/) and [The Odin Project](https://www.theodinproject.com)
 
-* Ruby version
+## Technology used
+* Ruby
+* Ruby on Rails
 
-* System dependencies
+## Contributors
 
-* Configuration
+* Darshan - [Github Profile](https://github.com/daashandayo)
+* Bellom -  [Github Profile](https://github.com/bellom)
 
-* Database creation
+## Instructions
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Git clone this repository.
+2. `git checkout development`
+3. `bundle install`
+4. `rails db:migrate`
+5. `rails server`
