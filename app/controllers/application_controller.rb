@@ -4,9 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?
 
   def remember(user)
-  	# user.remember_token = User.
-   	# cookies.permanent[:remember_token] = user.remember_token
-    user.remember_token = User.new_token
+    user.remember
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
   end
@@ -16,7 +14,7 @@ class ApplicationController < ActionController::Base
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by(id: user_id)
-      if user && user.authenticated?(:remember, cookies[:remember_token])
+      if user && user.authenticated?(cookies[:remember_token])
         log_in user
         @current_user = user
       end
