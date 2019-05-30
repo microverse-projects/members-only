@@ -1,11 +1,12 @@
 <div class="posts">
   <div>
-    <h3><%= post.title %></h3>
+    <h3 class="post"><%= post.title %></h3>
     <% if logged_in? %>
-    	<div>
+    	<h4 class="author">
     		<%= User.find_by(id: post.user_id).name  %>
-    	</div>
+    	</h4>
     <% end %>
     <p><%= post.content %></p>
   </div>
 </div>
+<hr>

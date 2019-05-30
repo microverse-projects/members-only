@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MembersOnly</title>
+    <title><%= yield(:title) %> | Members Only</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,33 +11,15 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+
     <div class="container">
     <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
-    <header>
-      <nav>
-        <ul>
-          <% unless logged_in? %> 
-          <li>
-            <%= link_to "login!", login_path %>
-          </li>
-          <% end %>
-          <li>
-            <%= link_to "All Posts", posts_path %>
-          </li>
-          <% if logged_in? %> 
-            <li>
-              <%= link_to "Logout!", logout_path, method: :delete %>
-            </li>
-            <li>
-              <%= link_to "New Post", posts_new_path %> 
-            </li>
-          <% end %>
-        </ul>
-      </nav>
-    </header>
+
     <%= yield %>
+
     </div>
   </body>
 </html>

@@ -1,15 +1,57 @@
-// @import "bootstrap-sprockets";
-// @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-/* form */
+
+/*
+========================
+HEADER
+========================
+*/
+
+
+
+/*
+========================
+TYPOGRAPHY
+========================
+*/
+h1 {
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+	padding-bottom: 1.5em;
+}
+
+
+/*
+========================
+POST
+========================
+*/
+.post {
+
+}
+
+.author {
+
+}
+
+
+/*
+========================
+FORM
+========================
+*/
 #error_explanation {
     color: red;
     ul {
       color: red;
       margin: 0 0 30px 0;
     }
-  }
-  
-.form-control {
-    border-radius: 30%
+}
+
+
+.form-container {
+	width: 50%;
+	margin: 0 auto;
 }

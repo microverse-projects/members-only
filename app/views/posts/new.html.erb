@@ -1,11 +1,14 @@
-<h1>Create Post</h1>
-<%= form_for(@post, url: posts_path) do |f| %>
+<% provide(:title, 'Create new Post') %>
+<h1>Create new Post</h1>
+<div class="form-container">
+	<%= form_for(@post, url: posts_path) do |f| %>
 
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
-
-    <%= f.label :content %>
-    <%= f.text_field :content, class: 'form-control' %>
-
-    <%= f.submit "Create Post" %>
-<% end %>
+	    <%= f.label :title %>
+	    <%= f.text_field :title, class: 'form-control' %>
+	    <br>
+	    <%= f.label :content %>
+	    <%= f.text_area :content, size: '50x10', class: 'form-control' %>
+	    <br>
+	    <%= f.submit "Create Post", class: "btn btn-primary" %>
+	<% end %>
+</div>
