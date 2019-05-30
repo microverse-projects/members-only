@@ -14,8 +14,8 @@ class SessionsController < ApplicationController
       redirect_to root_url
     else
       # Create an error message.
-      flash.now[:danger] = 'Invalid email/password combination'
-      redirect_to signup_url
+      flash.now[:danger] = "Invalid email/password combination"
+      render 'new'
     end
   end
 

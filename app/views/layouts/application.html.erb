@@ -7,15 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
+    <div class="container">
+    <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
     <header>
       <nav>
         <ul>
-          <li>
-            <%= link_to "Sign up now!", signup_path %>
-          </li>
           <% unless logged_in? %> 
           <li>
             <%= link_to "login!", login_path %>
@@ -36,5 +38,6 @@
       </nav>
     </header>
     <%= yield %>
+    </div>
   </body>
 </html>
