@@ -10,7 +10,7 @@ gem 'sqlite3'
 # Bycrypt
 gem 'bcrypt'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 5.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
